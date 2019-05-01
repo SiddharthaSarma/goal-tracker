@@ -1,7 +1,7 @@
 import { Constants } from 'expo';
 import React from 'react';
 import { ScrollView, View } from 'react-native';
-import { ListItem, Text } from 'react-native-elements';
+import { ListItem } from 'react-native-elements';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -9,7 +9,7 @@ export default class HomeScreen extends React.Component {
   };
   state = {
     users: [],
-    isLoading: 'false'
+    isLoading: false
   };
   async componentDidMount() {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -23,8 +23,6 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView>
-          <Text h1>Hi there</Text>
-          <Text h2>{this.state.isLoading}</Text>
           {this.state.users.map((l, i) => (
             <ListItem key={i} title={l.name} subtitle={l.email} bottomDivider />
           ))}
