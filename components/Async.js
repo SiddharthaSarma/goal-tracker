@@ -1,4 +1,3 @@
-import { Constants } from 'expo';
 import React from 'react';
 import { ScrollView, View } from 'react-native';
 import { ListItem } from 'react-native-elements';
@@ -36,6 +35,6 @@ const styles = {
   container: {
     display: 'flex',
     flex: 1,
-    paddingTop: Constants.statusBarHeight
+    paddingTop: 0
   }
 };
