@@ -1,9 +1,6 @@
 import * as React from 'react';
-import {
-  LineChart
-} from 'react-native-chart-kit';
-import { View, Text, Dimensions } from 'react-native';
-import { Constants } from 'expo';
+import { Dimensions, Text, View } from 'react-native';
+import { LineChart } from 'react-native-chart-kit';
 
 export default class Chart extends React.Component {
   render() {
@@ -21,10 +18,10 @@ export default class Chart extends React.Component {
                   Math.random() * 100,
                   Math.random() * 100,
                   Math.random() * 100,
-                  Math.random() * 100,
-                ],
-              },
-            ],
+                  Math.random() * 100
+                ]
+              }
+            ]
           }}
           width={Dimensions.get('window').width - 15} // from react-native
           height={220}
@@ -36,13 +33,13 @@ export default class Chart extends React.Component {
             decimalPlaces: 2, // optional, defaults to 2dp
             color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
             style: {
-              borderRadius: 16,
-            },
+              borderRadius: 16
+            }
           }}
           bezier
           style={{
             marginVertical: 8,
-            borderRadius: 16,
+            borderRadius: 16
           }}
         />
       </View>
