@@ -1,25 +1,17 @@
-import * as React from 'react';
-import { Text, View, StyleSheet, Alert, ScrollView } from 'react-native';
 import { Constants } from 'expo';
-
-// You can import from local files
-import AssetExample from './components/AssetExample';
-import SocialIcons from './components/SocialIcons';
-import Chart from './components/Chart';
+import * as React from 'react';
+import { Alert, ScrollView, StyleSheet, View } from 'react-native';
+import { Button, Card, Header, Input, ListItem } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {
-  Header,
-  Input,
-  Button,
-  ListItem,
-  Card,
-} from 'react-native-elements';
+import Chart from './components/Chart';
+// You can import from local files
+import SocialIcons from './components/SocialIcons';
 
 const users = [
   {
     name: 'brynn',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg',
-  },
+    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg'
+  }
 ];
 
 export default class App extends React.Component {
@@ -30,14 +22,14 @@ export default class App extends React.Component {
       [
         {
           text: 'Ask me later',
-          onPress: () => console.log('Ask me later pressed'),
+          onPress: () => console.log('Ask me later pressed')
         },
         {
           text: 'Cancel',
           onPress: () => console.log('Cancel Pressed'),
-          style: 'cancel',
+          style: 'cancel'
         },
-        { text: 'OK', onPress: () => console.log('OK Pressed') },
+        { text: 'OK', onPress: () => console.log('OK Pressed') }
       ],
       { cancelable: false }
     );
@@ -76,8 +68,8 @@ export default class App extends React.Component {
                     title={u.name}
                     leftAvatar={{
                       source: {
-                        uri: u.avatar,
-                      },
+                        uri: u.avatar
+                      }
                     }}
                   />
                 );
@@ -94,6 +86,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: Constants.statusBarHeight,
-  },
+    paddingTop: Constants.statusBarHeight
+  }
 });
